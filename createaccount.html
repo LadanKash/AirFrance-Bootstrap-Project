@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air France create account</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar-light .navbar-text {
+            color: rgba(0, 0, 0, 0.922);
+        }
+        .navbar {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .navbar-text {
+            font-weight: bold;
+            font-size: 18px;
+            color: black;
+        }
+        .form-container {
+            margin-top: -100px; 
+            position: relative; 
+            z-index: 1; 
+        }
+        .hero-image {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c0/Eiffel-tower-356113.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 110vh;
+            position: relative; 
+            z-index: 0; 
+        }
+      
+        a:-webkit-any-link {
+        text-decoration: none;
+        cursor: pointer;
+        }
+
+        .enrol-form-converse-icon {
+    min-width: 150px;
+    height: 48px;
+    margin-right: 22px;
+    background: url(../img/fb-logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 24px;
+}
+
+.form{
+    margin-left: 20px;
+    flex-direction: inherit;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    flex-direction: column-reverse;
+}
+
+.form-control {
+
+    display: block;
+    width: 95%;
+    height: calc(1.6em + 2rem + 3px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.btn-block {
+    display: block;
+    width: 95%;
+}
+    </style>
+</head>
+
+<body>
+<!--NAVBAR-->
+<div class="container-fluid">
+    <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="col">
+                <a class="navbar-brand" href="index.html" style="font-weight: bolder; font-size: 24px; margin-left: 30px;">
+                    AIRFRANCE<img src="images/AF.png" alt="Air France" width="40px">
+                </a>
+                <div class="col">
+                    <a href="signup.html" style="color: #333;">  <span style="font-size: 2em; font-weight: bolder; margin-left:1%; text-decoration: none;"> < </span></a><span class="navbar-text" style="margin-left:40%; text-decoration: none; ">Join Flying Blue</span>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<!-- Hero image -->
+<div class="hero-image"></div>
+
+<!-- Form -->
+<div class="container form-container" style="margin-top: -42% ;">
+    <div class="row justify-content-start">
+        <div class="col" style="margin: auto;" >
+            <div class="card" style="width: 480px;">
+                <div class="card-header">
+                    <h1>Let's get started! Can you tell us your name?</h1>
+                    <p> Enter your first and last name exactly as written on your passport or ID card.</p>
+    
+                </div>
+                <form class="form">
+                    <div class="form-group" >
+                        <span class="bwc-o-body">First name</span>
+                        <input type="text" class="form-control" id="inputServiceCard" placeholder="First name">
+                    </div>
+                    <div class="form-group">
+                        <span class="bwc-o-body">Last name</span>
+                        <input type="text" class="form-control" id="inputServiceCard" placeholder="Last Name">
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-block" style="height: 55px; background-color: rgb(9, 9, 53); color: #fff;"><strong>Continue</strong></button>
+                        <hr>
+                    </div>
+                </form>
+
+                <p> <img class="enrol-form-converse-icon" src="images/fb-logo.png" style="margin-left: 20px;"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+

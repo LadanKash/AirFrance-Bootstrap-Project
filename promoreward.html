@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air France KLM flight</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+<!--NAVBAR-->
+ <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a class="navbar-brand" href="index.html">☰ AIRFRANCE<img src="images/AF.png" alt="icon" width="30px"> </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Book a Flight</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="checkin.html">Check-in</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="mybooking.html">My Bookings</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="information.html">Information</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAirFranceCanada" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img src="images/CA-Canada-Flag-icon.png" alt="icon" width="20px">   AirFrance Canada
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownAirFranceCanada">
+          <a class="dropdown-item" href="#">Français</a>
+          <a class="dropdown-item" href="#">English</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="login1.html">Login <img src="images/icons8-person.png" alt="icon" width="20px"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="signup.html">Sign Up <img src="images/icons8-person.png" alt="icon" width="20px"></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="hero-image" >
+    <div class="container">
+      <div class="row justify-content-end">
+        <div class="col-md-6">
+          <div class="hero-text">
+            <h1>Your Hero Text Goes Here</h1>
+            <p>Some additional information or description about your hero section.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- first container -->
+<div class="container booking-container" style="box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: -30px;">
+  <h2> <img src="images/avion.jpg" alt="icon" width="30px">Book a Flight <button class="btn btn-primary">Book with Miles</button></h2>
+  <form>
+    <!-- First row -->
+    <div class="form-row align-items-center">
+      <div class="dropdown">
+        <button style="margin-top: 15px; margin-right: 15px;" class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+          Round Trip
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#" onclick="showAdditionalOptions()">Round Trip</a>
+          <a class="dropdown-item" href="#">One-way</a>
+          <a class="dropdown-item" href="#">Multi-city</a>
+        </div>
+      </div>
+
+      <!-- Departing from -->
+      <div class="form-group col-md-4">
+        <label for="departing"><img src="images/avion.jpg" alt="icon" width="30px">Departing from</label>
+        <input type="text" class="form-control" id="departing" placeholder="">
+        <div id="departingScroll" class="dropdown-menu departing-menu" style="display: none; overflow-y: auto; height: 150px;">
+          <h4>Popular destinations</h4>
+          <p onclick="selectDestination('departing', this)">Montreal, Pierre Elliott Trudeau International Airport</p>
+          <p onclick="selectDestination('departing', this)">Toronto</p>
+          <p onclick="selectDestination('departing', this)">Vancouver, Vancouver International Airport</p>
+          <p onclick="selectDestination('departing', this)">Calgary, Calgary International Airport</p>
+          <p onclick="selectDestination('departing', this)">Ottawa</p>
+          <p onclick="selectDestination('departing', this)">Edmonton, Edmonton International</p>
+        </div>
+      </div>
+
+      <!-- Arriving at -->
+      <div class="form-group col-md-4">
+        <label for="arriving"><img src="images/avion.jpg" alt="icon" width="30px">Arriving at</label>
+        <input type="text" class="form-control" id="arriving" placeholder="">
+        <div id="arrivingScroll" class="dropdown-menu arriving-menu" style="display: none; overflow-y: auto; height: 150px;">
+          <h4>Popular destinations</h4>
+          <p onclick="selectDestination('arriving', this)">Paris, Paris-Charles de Gaulle airport</p>
+          <p onclick="selectDestination('arriving', this)">Nice, Nice Côte d'Azur Airport</p>
+          <p onclick="selectDestination('arriving', this)">Rome, Fiumicino Airport</p>
+          <p onclick="selectDestination('arriving', this)">Marseille</p>
+          <p onclick="selectDestination('arriving', this)">Malaga, Málaga Airport</p>
+          <p onclick="selectDestination('arriving', this)">Mauritius, Sir Seewoosagur</p>
+        </div>
+      </div>
+
+      <!-- button Continue  -->
+      <div class="form-group col-md-2" style="margin-top: 2.3%;">
+        <button class="btn btn-primary">Continue</button>
+      </div>
+    </div>
+    
+    <!--  Round Trip Additional options -->
+    <div id="additionalOptions" class="form-row align-items-center" style="display: none; margin-top: 10px;">
+      <div class="form-group col-md-4">
+        <label for="travelDates">Travel Dates</label>
+        <input type="text" class="form-control" id="travelDates" placeholder="Select dates">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="adult">Adult</label>
+        <input type="number" class="form-control" id="adult" value="1">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="class">Class</label>
+        <select class="form-control" id="class">
+          <option>Economy</option>
+          <option>Business</option>
+          <option>First</option>
+        </select>
+      </div>
+    </div>
+  </form>
+</div>
+
+<br>
+<div class="container">
+    <div class="b-example-divider"></div> <br>
+    <h2>Destination and deals</h2>
+    <ul class="nav nav-tabs">
+      <li class="nav-item"><a class="nav-link" href="index.html">Flights</a></li>
+      <li class="nav-item"><a class="nav-link active" href="promoreward.html">Promo Rewards</a></li>
+  </ul>
+  <br><br>
+    <p style="margin-left: 14px;">Explore the world with Miles. Book your reward tickets now!</p>
+    <div class="container">
+        <div class="row">
+            <!-- First column -->
+            <div class="col-md-12">
+                <div class="card text-white">
+                    <img src="https://img.static-af.com/transform/38a2ea50-ce96-402b-b538-affd18004009/?io=transform:fill,width:960,height:480" class="card-img img-fluid rounded float-start grow-image" alt="...">
+                    <div class="card-img-overlay" style="color: #fff; font-weight: bold; margin-top: 380px; font-size: 24px;">
+                        <h5 class="card-title">Go further with your Miles.</h5>
+                        <p class="card-text">New deals are released on the first weekday of every month.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="btn-group" style="background-color: rgb(11, 11, 40);border-radius: 5px; margin-left: 1%;">
+        <button type="button" class="btn btn-primary btn-lg">Discover Promo Rewards</button>
+      </div>
+  </div>
+    
+    <br><br>
+    <!--Cart-->
+
+<div class="container">
+    <h3>INFORMATION</h3><br>
+    <div class="row row-cols-2">
+        <div class="col">
+            <div class="card shadow-sm">
+          <img src="https://img.static-af.com/images/media/B9E57310-517C-4965-A4C9669F5D409187/source/header-bw-1440x360?w=1440&aspect_ratio=4:1" alt="">
+          <div class="card-body">
+            <h4 class="card-text">Partnership with "Les Chefs"</h4>
+            <div class="d-flex justify-content-between align-items-center">
+              <small class="text-body-secondary">Air France is proud partner of the Radio-Canada show "Les Chefs", for the second year in a row.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+         <img src="https://img.static-af.com/transform/a677ac73-6b55-4599-9df8-08460a7cd1a7/Paris-Pont-Alexandre-III-Bridge?io=transform:fill,width:1440,height:360" alt="">
+          <div class="card-body">
+            <h4 class="card-text">Direct flight Quebec city - Paris</h4>
+            <div class="d-flex justify-content-between align-items-center">
+              <small class="text-body-secondary">From June 15, take advantage of the direct flight Québec City – Paris, renewed for a 3rd year. </small>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </div><br>
+  <div class="container">
+    <div class="row row-cols-2">
+        <div class="col">
+            <div class="card shadow-sm">
+          <img src="https://img.static-af.com/images/media/668C9D23-A9FC-4252-9F9C65ED9A5E0E0D/?w=960&aspect_ratio=2:1" alt="">
+          <div class="card-body">
+            <h4 class="card-text">Special offer in Premium Economy cabin </h4>
+            <div class="d-flex justify-content-between align-items-center">
+              <small class="text-body-secondary">Air France is proud partner of the Radio-Canada show "Les Chefs", for the second year in a row.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+         <img src="https://img.static-af.com/images/media/96BABE2C-6223-493C-8CCF54C2F7C552D1/source/b2c_newsblock_960x640_life01_promoen?w=960&aspect_ratio=2:1" alt="">
+          <div class="card-body">
+            <h4 class="card-text">Limited time-offer</h4>
+            <div class="d-flex justify-content-between align-items-center">
+              <small class="text-body-secondary">From June 15, take advantage of the direct flight Québec City – Paris, renewed for a 3rd year. </small>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+    <br>
+    <div class="btn-group" style="background-color: rgb(11, 11, 40);border-radius: 5px;">
+        <button type="button" class="btn btn-primary btn-lg">Our Best Offer and Promotion</button>
+      </div>
+  </div>
+<!--cart2-->
+
+<div class="album py-5 bg-body-tertiary">    
+    <div class="container">
+        <h3>Looking for more than a flight?</h3><br>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card shadow-sm">
+                   <img src="https://img.static-af.com/images/meta/IDname/AFDESIGN-HP-PARTNER-TRANSPORTATION/?w=200&aspect_ratio=1:1" alt="">
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-body-secondary">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow-sm">
+                   <img src="https://img.static-af.com/images/meta/IDname/AFDESIGN-HP-PARTNER-ACCOMMODATION/?w=200&aspect_ratio=1:1" alt="">
+          <div class="card-body">
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+           <div class="d-flex justify-content-between align-items-center">
+        <small class="text-body-secondary">9 mins</small>
+      </div>
+    </div>
+  </div>
+    </div>
+      <div class="col-md-3">
+        <div class="card shadow-sm">
+        <img src="https://img.static-af.com/images/meta/IDname/AFDESIGN-HP-PARTNER-CAR-RENTAL/?w=200&aspect_ratio=1:1" alt="">
+      <div class="card-body">
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <div class="d-flex justify-content-between align-items-center">
+        <small class="text-body-secondary">9 mins</small>
+      </div>
+    </div>
+  </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow-sm">
+                   <img src="https://img.static-af.com/images/meta/IDname/AFDESIGN-HP-PARTNER-ACTIVITIES/?w=200&aspect_ratio=1:1" alt="">
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-body-secondary">9 mins</small>
+                      </div>
+                    </div>
+                    
+                </div>
+            
+    </div><br> <br>
+    <button type="button" class="btn btn-primary"
+    style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; margin-top: 20px;margin-left: 1.2%;">
+          Discover More
+    </button>
+</div> 
+</div>
+</div>
+<br><br>
+
+<div class="container" class=" card card-body card-text" style=" bottom: 0; left: 0; right: 0;
+        background-color: rgba(255, 255, 255, 0.7)">
+  <h3 >Air France Travel Destinations</h3><br>
+  <p>Every dream has a destination</p>
+</div>
+  <br><br>
+  
+
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-md-6">
+            <div class="card bg-dark text-white">
+                <img src="images/Florence (Italy).jpeg" class="card-img img-fluid rounded float-start grow-image" alt="...">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">Florence Italy</h5>
+                    <p class="card-text"></p>
+                    <p class="card-text">Last updated 3 mins ago</p>
+                </div>
+            </div>
+        </div>
+      
+        <div class="col-md-6">
+            <div class="row">
+               
+                <div class="col-md-12">
+                    <div class="card bg-dark text-white mb-3">
+                        <img src="images/Paris (France).jpeg" class="card-img img-fluid rounded grow-image" alt="...">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">France Paris</h5>
+                            <p class="card-text"></p>
+                            <p class="card-text">Last updated 3 mins ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+    <div class="btn-group" style="background-color: rgb(11, 11, 40); margin-left: 13.2%; border-radius: 5px;">
+      <button type="button" class="btn btn-primary btn-lg">Get inspired for your next destination</button>
+    </div>
+  </div><br> <br>
+<div class="b-example-divider" ></div> <br>
+<div class="jumbotron jumbotron-fluid" style="  max-width: 70%; margin-left: 15%; box-shadow: 2px 1px 2px 2px rgba(0,0,0,0.1);">
+  <div class="container">
+    <h4 class="display-5">Looking for special deals? Need inspiration?</h4>
+    <p class="lead">Sign up here to receive personalized offers, travel ideas and information about our new products and services.</p>
+  </div>
+</div>
+
+<!--footer-->
+<footer style=" background-color: #1e1e3f; color: white; padding: 20px; ">
+  <div class="footer-content" style="  max-width: 900px; margin: 0 auto; font-size: 14px;">
+    <div class="row" style="display: flex;">
+      <div class="column" style=" margin-top: 50px; margin-right: 42px;">
+        <h6>Help and Contacts</h6>
+        <ul style="list-style-type: none; padding-left: 0;">
+          <li>Contact us</li>
+          <li>Claims</li>
+          <li>Refunds</li>
+          <li>Claim</li>
+          <li>Passengers with <br>
+             disabilities</li>
+          <li>Online payment <br>
+            and shopping</li>
+        </ul>
+      </div>
+      <div class="column" style=" margin-top: 50px; margin-right: 42px;">
+        <h6>Booking</h6>
+        <ul style="list-style-type: none; padding-left: 0;">
+          <li>Booking fees - Service <br>
+             fees</li>
+          <li>Payment methods</li>
+          <li>Air France shopping</li>
+          <li>Air France KLM World<br>
+             Elite Mastercard®</li>
+          <li>Why book your ticket<br>
+             on the official Air<br>
+              France website?</li>
+        </ul>
+      </div>
+      <div class="column" style=" margin-top: 50px; margin-right: 42px;">
+        <h6>About Air France and partners</h6>
+        <ul style="list-style-type: none; padding-left: 0;">
+          <li>Flying Blue</li>
+          <li>Transavia</li>
+          <li>KLM</li>
+          <li>SkyTeam</li>
+          <li>Air France corporate</li>
+          <li>Worldwide sites</li>
+          <li>Affiliate program</li>
+        </ul>
+      </div>
+      <div class="column" style=" margin-top: 50px; margin-right: 42px;">
+        <h6>Air France app</h6>
+        <ul style="list-style-type: none; padding-left: 0;">
+          <li><img  src="images/appstor.png" style="max-width: 100px; margin-bottom: 8px;"></li>
+          <li><img  src="images/google.png" style="max-width: 100px; margin-bottom: 8px;" ></li>
+          <li><img  src="images/appgallery.png" style="max-width: 100px;margin-bottom: 8px; "></li>
+        </ul>
+      </div>
+      <div class="column" style=" margin-top: 50px; margin-right: 42px;">
+        <h6>Fly from</h6>
+        <ul style="list-style-type: none; padding-left: 0;">
+          <li>Vancouver</li>
+          <li>Montreal</li>
+          <li>Toronto</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column" style=" margin-top: 50px; margin-right: 42px;">
+        <h6>Fly To France</h6>
+        <ul style="list-style-type: none; padding-left: 0;">
+          <li>Flight Montreal - Paris</li>
+          <li>Flight Montreal - Lyon</li>
+          <li>Flight Montreal - Marseille</li>
+          <li>Flight Montreal - Nice</li>
+        </ul>
+      </div>
+      <div class="column" style=" margin-top: 50px; margin-right: 42px;">
+        <h6>Fly Worldwide</h6>
+        <ul style="list-style-type: none; padding-left: 0;">
+          <li>All flights</li>
+          <li>Flight Montreal - Rome</li>
+          <li>Flight Montreal - Barcelona</li>
+          <li>Flight Montreal - London</li>
+          <li>Flight Montreal - Madrid</li>
+          <li>Flight Montreal - Amsterdam</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap scripts -->
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+    $(".nav-link").on("click", function(){
+      $(".nav-link").removeClass("active");
+      $(this).addClass("active");
+    });
+  });
+</script>
+<!--scroolle-->
+<script>
+  // Initialize Flatpickr
+  flatpickr("#travelDates", {
+    dateFormat: "Y-m-d", 
+    minDate: "today" 
+  });
+</script>
+
+<script>
+  document.getElementById('departing').addEventListener('click', function() {
+    toggleScroll('departingScroll');
+  });
+
+  document.getElementById('arriving').addEventListener('click', function() {
+    toggleScroll('arrivingScroll');
+  });
+
+  function toggleScroll(id) {
+    var element = document.getElementById(id);
+    if (element.style.display === "block") {
+      element.style.display = "none";
+    } else {
+      element.style.display = "block";
+    }
+  }
+
+  function selectDestination(inputId, element) {
+    var inputField = document.getElementById(inputId);
+    inputField.value = element.textContent;
+  }
+
+  function showAdditionalOptions() {
+    var additionalOptions = document.getElementById('additionalOptions');
+    additionalOptions.style.display = 'flex';
+  }
+</script>
+</body>
+</html>

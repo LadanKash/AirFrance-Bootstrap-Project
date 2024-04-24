@@ -1,0 +1,63 @@
+.navbar {
+    padding-top: 20px; 
+    padding-bottom: 30px; 
+   }
+   .navbar-brand {
+    font-weight: bold;
+    font-size: 24px; 
+   }
+  .navbar-nav .nav-link {
+    font-weight: bold;
+    font-size: 18px; 
+  }
+  .navbar-nav .nav-link.active {
+    border-bottom: 2px solid red; 
+  }
+  
+  .btn-primary {
+    color: #fff;
+    background-color: #031f3d;
+    border-color: #031f3d;
+   }
+   .btn-primary:hover {
+    color: #fff;
+    background-color: #1d3956;
+    border-color: #1d3956;
+  }
+  
+
+  /* footer*/
+
+  footer {
+  width: calc(100% - 30px); 
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+
+ .bg-dark {
+  background-color: #09243f !important;
+}
+
+
+.navbar {
+  width: 100%;
+ }
+
+ .custom-img {
+  background-image: url('images/flight.jpg');
+  background-size: cover;
+  background-position: right;
+  /*position: fixed;*/
+  margin-top: 9%; 
+  margin-left: 2%;
+  width: 100%; 
+  z-index: -1; 
+}
+
+  .main-content {
+    padding-top: 100px; 
+    padding-bottom: 100px; 
+  }
+
+  

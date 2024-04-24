@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air France Check-in</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style3.css">
+   <style>
+.input-group-text {
+  background-color: #fbfbfc;
+  border-left: none;
+}
+ 
+
+.with-arrow-input {
+  position: relative;
+}
+
+.arrow-icon {
+  position: absolute;
+  right: 10px; 
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  pointer-events: none;
+}
+
+a {
+    color: #1a1b1b;
+    text-decoration: none;
+}
+   </style>
+    
+</head>
+<body>
+<!--NAVBAR-->
+ <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a class="navbar-brand" href="index.html">☰ AIRFRANCE<img src="images/AF.png" alt="icon" width="30px"> </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Book a Flight</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="checkin.html">Check-in</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="mybooking.html">My Bookings</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="information.html">Information</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAirFranceCanada" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img src="images/CA-Canada-Flag-icon.png" alt="icon" width="20px">   AirFrance Canada
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownAirFranceCanada">
+          <a class="dropdown-item" href="#">Français</a>
+          <a class="dropdown-item" href="#">English</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="login1.html">Login <img src="images/icons8-person.png" alt="icon" width="20px"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="signup.html">Sign Up <img src="images/icons8-person.png" alt="icon" width="20px"></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+ </div>
+ <div class="main-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <!-- Form -->
+        <h3 style="margin-top: 30px;">Ready to check in?</h3>
+        <p>You can check in any time from 30 hours* before your flight's departure.<br>
+        Please select how you would like to check in.</p>
+        <form>
+          <a href="login1.html" class="with-arrow-input">
+            <div class="form-group">
+              <label for="exampleInputName"></label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="exampleInputName" placeholder="👤 Log into my account">
+                <span class="arrow-icon">&#9658;</span>
+              </div>
+            </div>
+          </a>
+          <p>Don't have an account? Sign up for a free account to enjoy all our benefits.<br><a href="signup.html">Sign up for a free account</a></p>
+          <div class="form-group">
+            <label for="exampleInputEmail"></label>
+            <a href="#" class="with-arrow-input">
+            <div class="input-group">
+            <input type="email" class="form-control" id="exampleInputEmail" placeholder=" 🗓 Enter my booking detail">
+            <span class="arrow-icon">&#9658;</span>
+          </div>
+        </a>
+        </div>
+          <p><a href="checkin-options.html">View all check-in options</a> <br> 
+            <a href="cancel-checkin.html">Cancel my check-in</a></p>
+          <p>* You can check in 24 hours before your flight’s departure for all Delta Air Lines flights departing from the United States. 
+          The same applies for Air France flights departing from Atlanta and Detroit.</p>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <!-- Image -->
+        <img src="https://cdn.onemileatatime.com/wp-content/uploads/2024/02/air-france-boxed-meal.jpg" alt="Your Image" class="custom-img">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--footer-->
+<footer style=" background-color: #1e1e3f; color: white; padding: 20px; ">
+  <div class="footer-content" style="  max-width: 900px; margin: 0 auto; font-size: 14px;">
+    <div class="row" style="display: flex;">
+      <div class="column" style=" margin-top: 50px; margin-right: 42px;">
+        <h6>Help and Contacts</h6>
+        <ul style="list-style-type: none; padding-left: 0;">
+          <li>Contact us</li>
+          <li>Claims</li>
+          <li>Refunds</li>
+          <li>Claim</li>
+          <li>Passengers with <br>
+             disabilities</li>
+          <li>Online payment <br>
+            and shopping</li>
+        </ul>
+      </div>
+      <div class="column" style=" margin-top: 50px; margin-right: 42px;">
+        <h6>Booking</h6>
+        <ul style="list-style-type: none; padding-left: 0;">
+          <li>Booking fees - Service <br>
+             fees</li>
+          <li>Payment methods</li>
+          <li>Air France shopping</li>
+          <li>Air France KLM World<br>
+             Elite Mastercard®</li>
+          <li>Why book your ticket<br>
+             on the official Air<br>
+              France website?</li>
+        </ul>
+      </div>
+      <div class="column" style=" margin-top: 50px; margin-right: 42px;">
+        <h6>About Air France and partners</h6>
+        <ul style="list-style-type: none; padding-left: 0;">
+          <li>Flying Blue</li>
+          <li>Transavia</li>
+          <li>KLM</li>
+          <li>SkyTeam</li>
+          <li>Air France corporate</li>
+          <li>Worldwide sites</li>
+          <li>Affiliate program</li>
+        </ul>
+      </div>
+      <div class="column" style=" margin-top: 50px; margin-right: 42px;">
+        <h6>Air France app</h6>
+        <ul style="list-style-type: none; padding-left: 0;">
+          <li><img  src="images/appstor.png" style="max-width: 100px; margin-bottom: 8px;"></li>
+          <li><img  src="images/google.png" style="max-width: 100px; margin-bottom: 8px;" ></li>
+          <li><img  src="images/appgallery.png" style="max-width: 100px;margin-bottom: 8px; "></li>
+        </ul>
+      </div>
+      <div class="column" style=" margin-top: 50px; margin-right: 42px;">
+        <h6>Fly from</h6>
+        <ul style="list-style-type: none; padding-left: 0;">
+          <li>Vancouver</li>
+          <li>Montreal</li>
+          <li>Toronto</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column" style=" margin-top: 50px; margin-right: 42px;">
+        <h6>Fly To France</h6>
+        <ul style="list-style-type: none; padding-left: 0;">
+          <li>Flight Montreal - Paris</li>
+          <li>Flight Montreal - Lyon</li>
+          <li>Flight Montreal - Marseille</li>
+          <li>Flight Montreal - Nice</li>
+        </ul>
+      </div>
+      <div class="column" style=" margin-top: 50px; margin-right: 42px;">
+        <h6>Fly Worldwide</h6>
+        <ul style="list-style-type: none; padding-left: 0;">
+          <li>All flights</li>
+          <li>Flight Montreal - Rome</li>
+          <li>Flight Montreal - Barcelona</li>
+          <li>Flight Montreal - London</li>
+          <li>Flight Montreal - Madrid</li>
+          <li>Flight Montreal - Amsterdam</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  $(".nav-link").on("click", function(){
+    $(".nav-link").removeClass("active");
+    $(this).addClass("active");
+  });
+});
+</script>
+
+</body>
+</html>

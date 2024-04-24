@@ -1,0 +1,139 @@
+.navbar {
+    padding-top: 20px; 
+    padding-bottom: 30px; 
+   }
+   .navbar-brand {
+    font-weight: bold;
+    font-size: 24px; 
+   }
+  .navbar-nav .nav-link {
+    font-weight: bold;
+    font-size: 18px; 
+  }
+  .navbar-nav .nav-link.active {
+    border-bottom: 2px solid red; 
+  }
+  /*HERO */
+  .hero-image {
+    background-image: url('images/b2c_hp_hero.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    margin: auto 30px;
+    align-items: center;
+      }
+
+  .hero-text {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 300px;
+      }
+
+   .booking-container {
+     background-color: rgb(255, 255, 255);
+     padding: 20px;
+     border-radius: 10px; 
+     margin-top: -20px 10px ;
+     border-bottom-color:rgb (233, 233, 235);
+        
+      }
+  .nav-tabs .nav-item .nav-link.active {
+    border-bottom: 2px solid blue;
+  }
+  .nav-tabs .nav-item .nav-link.inactive {
+    color: black;
+  }
+
+ 
+ /* animation */
+ .card {
+    transition: transform 0.3s ease;
+  }
+  .card:hover {
+    transform: scale(1.02);
+  }
+
+  .btn-primary {
+  color: #fff;
+  background-color: #031f3d;
+  border-color: #031f3d;
+ }
+ .btn-primary:hover {
+  color: #fff;
+  background-color: #1d3956;
+  border-color: #1d3956;
+}
+
+
+a {
+  color: #535151;
+  text-decoration: none;
+}
+
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+  color: #fff;
+}
+
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #fff;
+  border-radius: .3rem;
+ }
+
+.element.style {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
+
+  /* footer*/
+
+
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #fff;
+  border-radius: .3rem;
+ }
+
+.element.style {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
+
+  /* footer*/
+
+
+footer {
+  width: calc(100% - 30px); 
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+
+ .bg-dark {
+  background-color: #09243f !important;
+}
+
+
+.dropdown-menu {
+  position: absolute;
+}
+
+.dropdown-menu.departing-menu {
+  top: calc(100% + 10px);
+  left: 0;
+}
+
+.dropdown-menu.arriving-menu {
+  top: calc(100% + 10px);
+  left: 0;
+}
+
+.transparent-btn {
+  background-color: transparent;
+  border: none;
+  color: inherit; /* Maintain the button's text color */
+}

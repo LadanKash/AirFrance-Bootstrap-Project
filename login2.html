@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air France Check-in</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+       .navbar-light .navbar-text {
+         color: rgba(0, 0, 0, 0.922);
+     }
+        .navbar {
+            padding-top: 10px; 
+            padding-bottom: 10px; 
+        }
+        .navbar-text {
+            font-weight: bold;
+            font-size: 18px;
+            color: black;
+        }
+        .form-container {
+            margin-top: 50px; 
+        }
+        .hero-image {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c0/Eiffel-tower-356113.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+        a:-webkit-any-link {
+    text-decoration: none;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+<!--NAVBAR-->
+<div class="container-fluid">
+    <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="col">
+                <a class="navbar-brand" href="index.html" style="font-weight: bolder; font-size: 24px; margin-left: 30px;">
+                    AIRFRANCE<img src="images/AF.png" alt="icon" width="40px">
+                </a>
+                <div class="col">
+                 <a href="mybooking.html" style="color: #333;"> <span style="font-size: 2em; font-weight: bolder; margin-left:1%; text-decoration: none;"> < </span></a><span class="navbar-text" style="margin-left:40% ; text-decoration: none;">Log in with PIN code</span>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<!-- Hero image -->
+<div class="hero-image"></div>
+
+<!-- Form -->
+<div class="container form-container" style="margin-top: -550px;">
+    <div class="row justify-content-start">
+        <div class="col">
+            <div class="card" style="width: 480px;">
+                <div class="card-header">
+                    <h1>Enter your email or Flying Blue number</h1>
+                    <p>Flying Blue number or e-mail address</p>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="inputServiceCard" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-block" style="height: 55px; background-color: rgb(9, 9, 53); color: #fff;"><strong>Continue</strong></button>
+                            <hr>
+                        </div>
+                    </form>
+                    <div class="mt-4">
+                        <a href="#" style="text-decoration: none; color: rgb(17, 17, 19);"><strong> Don't have an account yet? Create your account</strong></a>
+                    </div>
+                    <div class="mt-4">
+                        <p>Need help?</p>
+                        <p><a href="#" style="text-decoration: none; color: rgb(19, 19, 81);"><strong>Log in with your password instead?</strong></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
